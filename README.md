@@ -166,4 +166,37 @@ RUN openssl req -new -key "/etc/ssl/private/default.key" -out "/etc/ssl/private/
 
 RUN openssl x509 -req -days 3650 -in "/etc/ssl/private/default.csr" -signkey "/etc/ssl/private/default.key" -out "/etc/ssl/private/default.crt"
 ```
-## Step 6: Start coding!
+## Step 6: Complete phpDocs, directly from the source with ide-helper command:
+
+In your laradock folder, run:
+
+```bash
+# start the containers
+docker-compose up -d nginx mysql
+
+
+# ssh into the workspace container
+docker-compose exec --user=laradock workspace bash
+
+# require ide-helper package with composer using the following command
+composer require --dev barryvdh/laravel-ide-helper
+
+# complete phpDocs
+php artisan ide-helper:eloquent && php artisan ide-helper:generate && php artisan ide-helper:meta && php artisan ide-helper:models -n
+```
+
+## Step 7: Start coding!
+
+In your laradock folder, run:
+
+```bash
+# start the containers
+docker-compose up -d nginx mysql
+
+# ssh into the workspace container
+docker-compose exec --user=laradock workspace bash
+
+# start hot reloading server
+cd my-project/ 
+yarn hot
+```
