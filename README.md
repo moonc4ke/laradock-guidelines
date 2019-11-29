@@ -34,4 +34,12 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
        * Set WORKSPACE_INSTALL_PYTHON=true
        * Set WORKSPACE_INSTALL_WORKSPACE_SSH=true
        
-3. 
+3. Configure docker-compose.yml
+    1. Under workspace > ports
+        * Add 8080:8080 — this is for vue hot reloading
+    2. Under workspace > extra_hosts:
+        * Add “${COMPOSE_PROJECT_NAME}.dev.local:0.0.0.0” — this is to make sure vue hot reload server can resolve the host machine’s IP
+
+## Step 3: Configure PHPStorm
+
+
