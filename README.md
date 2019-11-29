@@ -50,7 +50,19 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
 $ sudo ufw allow 9000
 ```
 
-## Step 3: Create a New Laravel Project & Configure PHPStorm
+## Step 3: Add your development site to your OS’s host file
+
+```bash
+$ sudo nano /etc/hosts
+```
+
+In the host file you should add an entry that looks something like this:
+
+```bash
+127.0.0.1       laravel-test.dev.local
+```
+
+## Step 4: Create a New Laravel Project & Configure PHPStorm
 
 1. Build the images and start the containers before continuing. Run the following command in the laradock folder under your project directory:
 
