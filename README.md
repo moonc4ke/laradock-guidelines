@@ -44,6 +44,12 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
 
 ![xdebug.ini](/images/xdebug.ini.png)
 
+5. Enable port 9000 for XDebug to work in yout Ubuntu machine by running:
+
+```bash
+$ sudo ufw allow 9000
+```
+
 ## Step 3: Create a New Laravel Project & Configure PHPStorm
 
 1. Build the images and start the containers before continuing. Run the following command in the laradock folder under your project directory:
