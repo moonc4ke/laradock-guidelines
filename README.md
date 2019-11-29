@@ -83,3 +83,4 @@ $ composer create-project --prefer-dist laravel/laravel your-project-name
 
 5. Alt + Shift + F9 in PhpStorm and then press 0 to create PHP Remote Debug configuration:
 
+![php remote debug configuration](/images/phpremotedebug.png)
