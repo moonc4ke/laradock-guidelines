@@ -84,3 +84,19 @@ $ composer create-project --prefer-dist laravel/laravel your-project-name
 5. Alt + Shift + F9 in PhpStorm and then press 0 to create PHP Remote Debug configuration:
 
 ![php remote debug configuration](/images/phpremotedebug.png)
+
+6. Create /xdebug-test route in web.php Laravel routes to test if XDebug is working:
+
+```bash
+Route::get('/xdebug-test', function () {
+    $word = 'Debugger';
+
+    $word .= ' In Action';
+
+    echo $word;
+});
+```
+
+Once, created Alt + Shift + F9 and then 1 to start debugger. Now you should be able to debug:
+
+![phpstorm xdebug](/images/phpstorm_xdebug.png)
