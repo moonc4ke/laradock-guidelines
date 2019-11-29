@@ -76,3 +76,7 @@ $ composer create-project --prefer-dist laravel/laravel your-project-name
 3. Add a new server named ‘laradock’ in PhpStorm:
 
 ![phpstorm server](/images/phpstormserver.png)
+
+4. Make sure yout PhpStorm PHP > Debug settings look like this:
+
+![phpstorm debug](/images/debug.png)
