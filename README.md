@@ -112,3 +112,43 @@ Route::get('/xdebug-test', function () {
 Once, created Alt + Shift + F9 and then 1 to start debugger. Now you should be able to debug:
 
 ![phpstorm xdebug](/images/phpstorm_xdebug.png)
+
+## Step 5: Set up Vue Hot Reloading HMR
+
+1. Add the following code in Laravel project's webpack.mix.js:
+
+```javascript
+mix.options({
+    hmrOptions: {
+        host: 'laravel.dev.local',  // site's host name
+        port: 8080,
+    }
+});
+
+// // fix css files 404 issue
+mix.webpackConfig({
+    // add any webpack dev server config here
+    devServer: { 
+        proxy: {
+            host: '0.0.0.0',  // host machine ip 
+            port: 8080,
+        },
+        watchOptions:{
+            aggregateTimeout:200,
+            poll:5000
+        },
+
+    }
+});
+```
+
+2. If you want to run your development site on https, use the following ‘hot’ option in Laravel project's package.json:
+
+```bash
+{
+....
+
+"hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --https --key /etc/ssl/private/default.key --cert /etc/ssl/private/default.crt --config=node_modules/laravel-mix/setup/webpack.config.js",
+...
+}
+```
