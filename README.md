@@ -40,7 +40,7 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
     2. Under workspace > extra_hosts:
         * Add “${COMPOSE_PROJECT_NAME}.dev.local:0.0.0.0” — this is to make sure vue hot reload server can resolve the host machine’s IP
 
-## Step 3: Configure PHPStorm
+## Step 3: Create a New Laravel Project & Configure PHPStorm
 
 1. Build the images and start the containers before continuing. Run the following command in the laradock folder under your project directory:
 
@@ -55,5 +55,14 @@ $ docker-compose up -d nginx mysql
 $ docker-compose ps
 
 # you can ssh into your workspace container by running:
-$ docker-compose exec workspace bash
+$ docker-compose exec --user=laradock workspace bash
 ```
+2. Once you ssh into your workspace container, you can create a new Laravel project by running:
+
+```bash
+$ composer create-project --prefer-dist laravel/laravel your-project-name
+```
+
+3. Add a new server named ‘laradock’ in PhpStorm:
+
+![phpstorm server](/images/phpstormserver.png)
