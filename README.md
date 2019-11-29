@@ -42,4 +42,18 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
 
 ## Step 3: Configure PHPStorm
 
+1. Build the images and start the containers before continuing. Run the following command in the laradock folder under your project directory:
 
+```bash
+$ docker-compose build nginx php-fpm mysql 
+
+# nginx is dependent on php-fpm, starting nginx will automatically 
+# start php-fpm
+$ docker-compose up -d nginx mysql
+
+# to view all started container
+$ docker-compose ps
+
+# you can ssh into your workspace container by running:
+$ docker-compose exec workspace bash
+```
