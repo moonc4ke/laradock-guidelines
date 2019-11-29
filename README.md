@@ -33,6 +33,8 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
     4. Under workspace
        * Set WORKSPACE_INSTALL_PYTHON=true
        * Set WORKSPACE_INSTALL_WORKSPACE_SSH=true
+    5. Under PHP MY ADMIN
+        * Change PMA_PORT to 8888
        
 3. Configure docker-compose.yml
     1. Under workspace > ports
@@ -67,11 +69,11 @@ In the host file you should add an entry that looks something like this:
 1. Build the images and start the containers before continuing. Run the following command in the laradock folder under your project directory:
 
 ```bash
-$ docker-compose build nginx php-fpm mysql 
+$ docker-compose build nginx php-fpm mysql phpmyadmin
 
 # nginx is dependent on php-fpm, starting nginx will automatically 
 # start php-fpm
-$ docker-compose up -d nginx mysql
+$ docker-compose up -d nginx mysql phpmyadmin
 
 # to view all started container
 $ docker-compose ps
@@ -175,7 +177,7 @@ In your laradock folder, run:
 
 ```bash
 # start the containers
-docker-compose up -d nginx mysql
+docker-compose up -d nginx mysql phpmyadmin
 
 # ssh into the workspace container
 docker-compose exec --user=laradock workspace bash
@@ -209,13 +211,13 @@ _ide_helper.php
 _ide_helper_models.php
 ```
 
-## Step 7: Start coding!
+## Step 8: Start coding!
 
 In your laradock folder, run:
 
 ```bash
 # start the containers
-docker-compose up -d nginx mysql
+docker-compose up -d nginx mysql phpmyadmin
 
 # ssh into the workspace container
 docker-compose exec --user=laradock workspace bash
@@ -224,3 +226,15 @@ docker-compose exec --user=laradock workspace bash
 cd my-project/ 
 yarn hot
 ```
+
+## How to access phpMyAdmin
+
+Make sure that containers are running, if not start the container by running:
+
+```bash
+docker-compose up -d nginx mysql phpmyadmin
+```
+
+Then, you can open phpMyAdmin by accessing laravel-test.dev.local:8888 or localhost:8888
+
+![phpMyAdmin](/images/phpmyadmin.png)
