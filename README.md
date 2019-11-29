@@ -22,3 +22,16 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
     5. Should have something like this in the end:
     
 ![your-site.conf](/images/conf.png)
+
+2. Configure laradock .env file
+    1. Rename COMPOSE_PROJECT_NAME to your project name.
+    2. Under php-fpm:
+       Set PHP_FPM_INSTALL_XDEBUG=true
+    3. Under MySQL
+       Change MYSQL_VERSION from “latest” to 5.7.25. This is a workaround for a bug in MySQL v8
+       Change MYSQL_PORT if you have a local MySQL server installed already
+    4. Under workspace
+       Set WORKSPACE_INSTALL_PYTHON=true
+       Set WORKSPACE_INSTALL_WORKSPACE_SSH=true
+       
+3. 
