@@ -84,7 +84,7 @@ $ docker-compose exec --user=laradock workspace bash
 ```bash
 $ composer create-project --prefer-dist laravel/laravel your-project-name
 ```
-After creating new Laravel project make sure you are using correct database credentials in .env file:
+* After creating new Laravel project make sure you are using correct database credentials in .env file:
 
 ![db credentials](/images/db_credentials.png)
 
@@ -177,7 +177,6 @@ In your laradock folder, run:
 # start the containers
 docker-compose up -d nginx mysql
 
-
 # ssh into the workspace container
 docker-compose exec --user=laradock workspace bash
 
@@ -186,6 +185,28 @@ composer require --dev barryvdh/laravel-ide-helper
 
 # complete phpDocs
 php artisan ide-helper:models -n && php artisan ide-helper:eloquent && php artisan ide-helper:generate && php artisan ide-helper:meta
+```
+
+## Step 7: Modify Laravel project's .gitignore
+
+```bash
+/.idea
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/mariadb
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php
 ```
 
 ## Step 7: Start coding!
