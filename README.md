@@ -198,7 +198,6 @@ php artisan ide-helper:models -n && php artisan ide-helper:eloquent && php artis
 /public/storage
 /storage/*.key
 /vendor
-/mariadb
 .env
 .env.backup
 .phpunit.result.cache
