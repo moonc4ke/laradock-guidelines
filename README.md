@@ -20,4 +20,5 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
     3. Change the server name and the root folder location.
     4. Uncomment the https block if you would like to use the https protocol (recommended).
     5. Should have something like this in the end:
-![your-site.conf](http://via.placeholder.com/200x150)
+    
+![your-site.conf](/images/conf.png)
