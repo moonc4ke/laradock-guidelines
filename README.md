@@ -84,6 +84,9 @@ $ docker-compose exec --user=laradock workspace bash
 ```bash
 $ composer create-project --prefer-dist laravel/laravel your-project-name
 ```
+After creating new Laravel project make sure you are using correct database credentials in .env file:
+
+![db credentials](/images/db_credentials.png)
 
 3. Add a new server named ‘laradock’ in PhpStorm:
 
@@ -182,7 +185,7 @@ docker-compose exec --user=laradock workspace bash
 composer require --dev barryvdh/laravel-ide-helper
 
 # complete phpDocs
-php artisan ide-helper:eloquent && php artisan ide-helper:generate && php artisan ide-helper:meta && php artisan ide-helper:models -n
+php artisan ide-helper:models -n && php artisan ide-helper:eloquent && php artisan ide-helper:generate && php artisan ide-helper:meta
 ```
 
 ## Step 7: Start coding!
