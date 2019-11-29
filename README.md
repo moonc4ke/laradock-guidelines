@@ -229,7 +229,7 @@ yarn hot
 
 ## How to access phpMyAdmin
 
-Make sure that containers are running, if not start the container by running:
+Make sure that containers are running, if not start the containers by running:
 
 ```bash
 docker-compose up -d nginx mysql phpmyadmin
