@@ -40,6 +40,10 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
     2. Under workspace > extra_hosts:
         * Add “${COMPOSE_PROJECT_NAME}.dev.local:0.0.0.0” — this is to make sure vue hot reload server can resolve the host machine’s IP
 
+4. Configure xdebug.ini in php-fpm:
+
+![xdebug.ini](/images/xdebug.ini.png)
+
 ## Step 3: Create a New Laravel Project & Configure PHPStorm
 
 1. Build the images and start the containers before continuing. Run the following command in the laradock folder under your project directory:
