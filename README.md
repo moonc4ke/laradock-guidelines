@@ -152,3 +152,18 @@ mix.webpackConfig({
 ...
 }
 ```
+
+3. The hot reload server runs in laradock workspace container. Make sure you have set up the SSL key and cert correctly. Here’s a script for generating the SSL in my workspace container:
+
+```bash
+# at the end of the workspace dockerfile
+
+RUN openssl dhparam -out /etc/ssl/private/dhparam.pem 2048
+
+RUN openssl genrsa -out "/etc/ssl/private/default.key" 2048
+
+RUN openssl req -new -key "/etc/ssl/private/default.key" -out "/etc/ssl/private/default.csr" -subj "/CN=default/O=default/C=UK"
+
+RUN openssl x509 -req -days 3650 -in "/etc/ssl/private/default.csr" -signkey "/etc/ssl/private/default.key" -out "/etc/ssl/private/default.crt"
+```
+## Step 6: Start coding!
