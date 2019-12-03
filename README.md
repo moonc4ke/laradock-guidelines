@@ -24,7 +24,7 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
 ![your-site.conf](/images/conf.png)
 
 2. Configure laradock .env file
-    1. Rename COMPOSE_PROJECT_NAME to your project name.
+    1. Rename COMPOSE_PROJECT_NAME to define the prefix of container names. For example, "bulve" or "patatas"
     2. Under php-fpm:
        * Set PHP_FPM_INSTALL_XDEBUG=true
     3. Under MySQL
