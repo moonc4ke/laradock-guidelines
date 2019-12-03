@@ -234,6 +234,6 @@ Make sure that containers are running, if not start the containers by running:
 docker-compose up -d nginx mysql phpmyadmin
 ```
 
-Then, you can open phpMyAdmin by accessing laravel-test.dev.local:8888 or localhost:8888
+Then, you can open phpMyAdmin by accessing http://localhost:8888/
 
 ![phpMyAdmin](/images/phpmyadmin.png)
