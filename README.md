@@ -44,7 +44,7 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
 
 4. Configure xdebug.ini in php-fpm:
 
-![xdebug.ini](/images/xdebug.ini.png)
+![xdebug.ini](/images/xdebugini.png)
 
 5. Enable port 9000 for XDebug to work in yout Ubuntu machine by running:
 
