@@ -106,19 +106,19 @@ $ composer create-project --prefer-dist laravel/laravel your-project-name
 
 ![Path mappings 3](/images/path_mappings_3.png)
 
-3. Add a new server named ‘laradock’ in PhpStorm:
+4. Add a new server named ‘laradock’ in PhpStorm:
 
 ![phpstorm server](/images/phpstormserver.png)
 
-4. Make sure yout PhpStorm PHP > Debug settings look like this:
+5. Make sure yout PhpStorm PHP > Debug settings look like this:
 
 ![phpstorm debug](/images/debug.png)
 
-5. Alt + Shift + F9 in PhpStorm and then press 0 to create PHP Remote Debug configuration:
+6. Alt + Shift + F9 in PhpStorm and then press 0 to create PHP Remote Debug configuration:
 
 ![php remote debug configuration](/images/phpremotedebug.png)
 
-6. Create /xdebug-test route in web.php Laravel routes to test if XDebug is working:
+7. Create /xdebug-test route in web.php Laravel routes to test if XDebug is working:
 
 ```bash
 Route::get('/xdebug-test', function () {
