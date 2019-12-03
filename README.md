@@ -18,7 +18,7 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
     1. Use Nginx.
     2. In laradock > nginx > sites, make a copy of the laravel.conf.example and rename it to your-site.conf
     3. Change the server name and the root folder location.
-    4. Uncomment the https block if you would like to use the https protocol (recommended).
+    4. Uncomment the https block if you would like to use the https protocol.
     5. Should have something like this in the end:
     
 ![your-site.conf](/images/conf.png)
