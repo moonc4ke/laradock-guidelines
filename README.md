@@ -90,6 +90,22 @@ $ composer create-project --prefer-dist laravel/laravel your-project-name
 
 ![db credentials](/images/db_credentials.png)
 
+3. Add PHP CLI Interpreter & Path mappings in PhpStorm:
+
+![CLI Interpreter 1](/images/cli_interpreter_1.png)
+
+![CLI Interpreter 2](/images/cli_interpreter_2.png)
+
+![CLI Interpreter 3](/images/cli_interpreter_3.png)
+
+![CLI Interpreter 4](/images/cli_interpreter_4.png)
+
+![Path mappings 1](/images/path_mappings_1.png)
+
+![Path mappings 2](/images/path_mappings_2.png)
+
+![Path mappings 3](/images/path_mappings_3.png)
+
 3. Add a new server named ‘laradock’ in PhpStorm:
 
 ![phpstorm server](/images/phpstormserver.png)
