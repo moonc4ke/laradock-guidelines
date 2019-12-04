@@ -253,3 +253,75 @@ docker-compose up -d nginx mysql phpmyadmin
 Then, you can open phpMyAdmin by accessing http://localhost:8888/
 
 ![phpMyAdmin](/images/phpmyadmin.png)
+
+## Production Setup
+### Run Site on SSL with Let’s Encrypt Certificate
+
+**Note: You need to Use Caddy here Instead of Nginx**
+
+To go Caddy Folders and Edit CaddyFile
+
+```bash
+$root@server:~/laravel/laradock# cd caddy
+$root@server:~/laravel/laradock/caddy# nano Caddyfile
+```
+
+Remove 0.0.0.0:80
+
+```bash
+0.0.0.0:80
+root /var/www/public
+```
+
+and replace with your https://yourdomain.com
+
+```bash
+https://yourdomain.com
+root /var/www/public
+```
+
+uncomment tls
+
+```bash
+#tls self-signed
+```
+
+and replace self-signed with your email address
+
+```bash
+tls serverbreaker@gmai.com
+```
+
+This is needed Prior to Creating Let’s Encypt
+
+### Run Your Caddy Container without the -d flag and Generate SSL with Let’s Encrypt
+
+```bash
+$root@server:~/laravel/laradock# docker-compose up  caddy
+```
+
+You’ll be prompt here to enter your email… you may enter it or not
+
+```bash
+Attaching to laradock_mysql_1, laradock_caddy_1
+caddy_1               | Activating privacy features...
+caddy_1               | Your sites will be served over HTTPS automatically using Let's Encrypt.
+caddy_1               | By continuing, you agree to the Let's Encrypt Subscriber Agreement at:
+caddy_1               |   https://letsencrypt.org/documents/LE-SA-v1.0.1-July-27-2015.pdf
+caddy_1               | Activating privacy features... done.
+caddy_1               | https://yourdomain.com
+caddy_1               | http://yourdomain.com
+```
+
+After it finishes, press Ctrl + C to exit.
+
+### Stop All Containers and ReRun Caddy and Other Containers on Background
+
+```bash
+$root@server:~/laravel/laradock# docker-compose down
+$root@server:~/laravel/laradock# docker-compose up -d mysql caddy
+```
+
+View your Site in the Browser Securely Using HTTPS (https://yourdomain.com)
+
+#### Note that Certificate will be Automatically Renew By Caddy
