@@ -130,7 +130,7 @@ Route::get('/xdebug-test', function () {
 });
 ```
 
-Once, created Alt + Shift + F9 and then 1 to start debugger. Now you should be able to debug:
+Once, created F9 and then 1 to start debugger. Now you should be able to debug:
 
 ![phpstorm xdebug](/images/phpstorm_xdebug.png)
 
