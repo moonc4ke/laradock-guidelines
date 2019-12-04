@@ -206,6 +206,11 @@ composer require --dev barryvdh/laravel-ide-helper
 # complete phpDocs
 php artisan ide-helper:models -n && php artisan ide-helper:eloquent && php artisan ide-helper:generate && php artisan ide-helper:meta
 ```
+If you experience "Undefined class object - multiple definitions exist for class", do this:
+
+```bash
+Settings | Editor | Inspections | PHP | Undefined | Undefined class | Don't report multiple class declaration potential problems
+```
 
 ## Step 7: Modify Laravel project's .gitignore
 
