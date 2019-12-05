@@ -206,6 +206,23 @@ composer require --dev barryvdh/laravel-ide-helper
 # complete phpDocs
 php artisan ide-helper:models -n && php artisan ide-helper:eloquent && php artisan ide-helper:generate && php artisan ide-helper:meta
 ```
+
+To fix "validate method not found in Illuminate\Http\Request" - create IDEAutoCompleteHelp.php at project's root folder:
+
+```bash
+<?php
+
+namespace Illuminate\Http;
+
+/**
+ * @method bool|array|null validate(array $rules, ...$params) Validate the given request with the given rules.
+ * @method array           validated()                        Get the validated data from the request.
+ */
+class Request {
+
+}
+```
+
 If you experience "Undefined class object - multiple definitions exist for class", do this:
 
 ```bash
