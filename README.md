@@ -52,7 +52,9 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
     
     ![phpMyAdmin volume](/images/phpmyadmin_volume.png)
     
-    3. 
+    3. Create [config.inc.php](https://github.com/s-emicolon/laradock-guidelines/blob/master/config.inc.php) in phpmyadmin directory:
+    
+    ![phpMyAdmin config dir](/images/phpmyadmin_config.png)
 
 6. Enable port 9000 for XDebug to work in yout Ubuntu machine by running:
 
