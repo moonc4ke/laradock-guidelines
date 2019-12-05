@@ -49,7 +49,9 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
 5. Increase the Session Timeout for phpMyAdmin:
     1. Go to php-fpm and open php7.3.ini (or any other your chosen php version .ini file). Look for session.gc_maxlifetime and change it to 172800
     2. Open docker-compose.yml and add volume for phpMyAdmin:
+    
     ![phpMyAdmin volume](/images/phpmyadmin_volume.png)
+    
     3. 
 
 6. Enable port 9000 for XDebug to work in yout Ubuntu machine by running:
