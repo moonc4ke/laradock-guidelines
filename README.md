@@ -41,14 +41,18 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
         * Add 8080:8080 — this is for vue hot reloading
     2. Under workspace > extra_hosts:
         * Add “larvel-test.dev.local:0.0.0.0” — this is to make sure vue hot reload server can resolve the host machine’s IP
-    3. Under phpmyadmin > environment:
-        * Add "- SESSION_TIMEOUT=86400" - this will change phpMyAdmin user logout timeout to 24 hours instead of 24 min.
     
 4. Configure xdebug.ini in php-fpm:
 
 ![xdebug.ini](/images/xdebuginic.png)
 
-5. Enable port 9000 for XDebug to work in yout Ubuntu machine by running:
+5. Increase the Session Timeout for phpMyAdmin:
+    1. Go to php-fpm and open php7.3.ini (or any other your chosen php version .ini file). Look for session.gc_maxlifetime and change it to 172800
+    2. Open docker-compose.yml and add volume for phpMyAdmin:
+    ![phpMyAdmin volume](/images/phpmyadmin_volume.png)
+    3. 
+
+6. Enable port 9000 for XDebug to work in yout Ubuntu machine by running:
 
 ```bash
 $ sudo ufw allow 9000
