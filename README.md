@@ -238,6 +238,19 @@ If you experience "Undefined class object - multiple definitions exist for class
 Settings | Editor | Inspections | PHP | Undefined | Undefined class | Don't report multiple class declaration potential problems
 ```
 
+To fix navigating from route to controller - change _ide_helper.php:
+
+```bash
+class Route extends \Illuminate\Support\Facades\Route {}
+```
+
+to
+
+```bash
+class Route extends Illuminate\Support\Facades\Route {}
+```
+
+
 ## Step 7: Modify Laravel project's .gitignore
 
 ```bash
