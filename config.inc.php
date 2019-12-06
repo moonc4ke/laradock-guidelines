@@ -137,3 +137,4 @@ if (file_exists('/etc/phpmyadmin/config.user.inc.php')) {
 }
 
 $cfg['LoginCookieValidity'] = 172800;
+$cfg['LoginCookieValidityDisableWarning'] = true;
