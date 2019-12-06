@@ -47,12 +47,11 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
 ![xdebug.ini](/images/xdebuginic.png)
 
 5. Increase the Session Timeout for phpMyAdmin:
-    1. Go to php-fpm and open php7.3.ini (or any other your chosen php version .ini file). Look for session.gc_maxlifetime and change it to 172800
-    2. Open docker-compose.yml and add volume for phpMyAdmin:
+    1. Open docker-compose.yml and add volume for phpMyAdmin:
     
     ![phpMyAdmin volume](/images/phpmyadmin_volume.png)
     
-    3. Create [config.inc.php](https://github.com/s-emicolon/laradock-guidelines/blob/master/config.inc.php) in phpmyadmin directory:
+    2. Create [config.inc.php](https://github.com/s-emicolon/laradock-guidelines/blob/master/config.inc.php) in phpmyadmin directory:
     
     ![phpMyAdmin config dir](/images/phpmyadmin_config.png)
 
