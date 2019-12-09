@@ -250,6 +250,12 @@ to
 class Route extends Illuminate\Support\Facades\Route {}
 ```
 
+To remove "property accessed via magic method" without document comments you can uncheck **Notify about access to a field via magic method** which is found in:
+
+```bash
+Project Settings > Inspections > PHP > Undefined > Undefined property
+```
+
 
 ## Step 7: Modify Laravel project's .gitignore
 
