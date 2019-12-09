@@ -145,6 +145,8 @@ Once, created F9 and then 1 to start debugger. Now you should be able to debug:
 
 8. To run **PHPUnit** test simply open test file and press F9. You should see PHPUnit test option in the menu - select that option and your PHPUnit test should run flawlessly 
 
+9. Set up Laravel Telescope https://laravel.com/docs/6.x/telescope
+
 ## Step 5: Set up Vue Hot Reloading HMR
 
 1. Add the following code in Laravel project's webpack.mix.js:
