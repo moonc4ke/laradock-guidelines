@@ -176,7 +176,7 @@ mix.webpackConfig({
 });
 ```
 
-2. Add/ change app.js and app.css includes in Laravel blade files:
+2. Add/ change modified app.js and app.css includes in Laravel blade files:
 
 ```bash
 <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
