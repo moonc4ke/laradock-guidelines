@@ -176,7 +176,16 @@ mix.webpackConfig({
 });
 ```
 
-2. If you want to run your development site on https, use the following ‘hot’ option in Laravel project's package.json:
+2. Add/ change app.js and app.css includes in Laravel blade files:
+
+```bash
+<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+
+<script src="{{ mix('js/app.js') }}"></script>
+```
+
+
+3. If you want to run your development site on https, use the following ‘hot’ option in Laravel project's package.json:
 
 ```bash
 {
@@ -187,7 +196,7 @@ mix.webpackConfig({
 }
 ```
 
-3. The hot reload server runs in laradock workspace container. Make sure you have set up the SSL key and cert correctly. Here’s a script for generating the SSL in my workspace container:
+4. The hot reload server runs in laradock workspace container. Make sure you have set up the SSL key and cert correctly. Here’s a script for generating the SSL in my workspace container:
 
 ```bash
 # at the end of the workspace dockerfile
