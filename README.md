@@ -304,7 +304,7 @@ _ide_helper_models.php
 * Change TELESCOPE_ENABLED=true to TELESCOPE_ENABLED=false
 * Copy .env.testing to .env.dusk.local
 
-## Step 8: Start coding!
+## Step 9: Start coding!
 
 In your laradock folder, run:
 
