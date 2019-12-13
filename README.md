@@ -289,6 +289,21 @@ _ide_helper.php
 _ide_helper_models.php
 ```
 
+## Step 8: PHP Unit Tests - "ReflectionException: Class env does not exist" error:
+
+#### Solution:
+
+* Copy .env to .env.testing
+* Open .env.testing
+* Change TELESCOPE_ENABLED=true to TELESCOPE_ENABLED=false
+
+#### If Testing With Dusk:
+
+* Copy .env to .env.testing
+* Open .env.testing
+* Change TELESCOPE_ENABLED=true to TELESCOPE_ENABLED=false
+* Copy .env.testing to .env.dusk.local
+
 ## Step 8: Start coding!
 
 In your laradock folder, run:
