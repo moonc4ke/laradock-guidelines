@@ -289,7 +289,7 @@ _ide_helper.php
 _ide_helper_models.php
 ```
 
-## Step 8: PHP Unit Tests - "ReflectionException: Class env does not exist" error:
+## Step 8: PHP Unit Tests - "ReflectionException: Class env does not exist" error (ALWAYS USE DIFFERENT TESTING DATABASE FOR A PROJECT TO AVOID TELESCOPE FROM CRASHING):
 
 #### Solution:
 
