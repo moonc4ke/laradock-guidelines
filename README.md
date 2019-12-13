@@ -295,13 +295,23 @@ _ide_helper_models.php
 
 * Copy .env to .env.testing
 * Open .env.testing
-* Change TELESCOPE_ENABLED=true to TELESCOPE_ENABLED=false
+* Modify .env.testing:
+```bash
+DB_CONNECTION=sqlite
+DB_DATABASE=:memory:
+TELESCOPE_ENABLED=false
+```
 
 #### If Testing With Dusk:
 
 * Copy .env to .env.testing
 * Open .env.testing
-* Change TELESCOPE_ENABLED=true to TELESCOPE_ENABLED=false
+* Modify .env.testing:
+```bash
+DB_CONNECTION=sqlite
+DB_DATABASE=:memory:
+TELESCOPE_ENABLED=false
+```
 * Copy .env.testing to .env.dusk.local
 
 ## Step 9: Start coding!
