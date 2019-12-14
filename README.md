@@ -123,7 +123,7 @@ $ composer create-project --prefer-dist laravel/laravel your-project-name
 
 ![phpstorm debug](/images/debug.png)
 
-6. Alt + Shift + F9 in PhpStorm and then press 0 to create PHP Remote Debug configuration:
+6. F9 in PhpStorm and then press 0 to create PHP Remote Debug configuration:
 
 ![php remote debug configuration](/images/phpremotedebug.png)
 
@@ -220,7 +220,7 @@ docker-compose up -d nginx mysql phpmyadmin
 # ssh into the workspace container
 docker-compose exec --user=laradock workspace bash
 
-# require ide-helper package with composer using the following command
+# cd into your laravel project and require ide-helper package with composer using the following command
 composer require --dev barryvdh/laravel-ide-helper
 
 # complete phpDocs
