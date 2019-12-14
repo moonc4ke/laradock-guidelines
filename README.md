@@ -145,7 +145,23 @@ Once, created F9 and then 1 to start debugger. Now you should be able to debug:
 
 8. To run **PHPUnit** test simply open test file and press F9. You should see PHPUnit test option in the menu - select that option and your PHPUnit test should run flawlessly 
 
-9. Set up Laravel Telescope https://laravel.com/docs/6.x/telescope
+9. Set up Laravel Telescope https://laravel.com/docs/6.x/telescope:
+
+```bash
+# start the containers
+docker-compose up -d nginx mysql phpmyadmin
+
+# ssh into the workspace container
+docker-compose exec --user=laradock workspace bash
+
+# cd into your laravel project and require Telescope package with composer using the following command
+composer require laravel/telescope --dev
+
+# install and migrate
+php artisan telescope:install
+php artisan migrate
+
+```
 
 ## Step 5: Set up Vue Hot Reloading HMR
 
