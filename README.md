@@ -35,6 +35,8 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
        * Set WORKSPACE_INSTALL_WORKSPACE_SSH=true
     5. Under PHP MY ADMIN
         * Change PMA_PORT to 8888
+    6. Under ADMINER
+        * Change ADM_PORT to 8888
        
 3. Configure docker-compose.yml
     1. Under workspace > ports
@@ -78,11 +80,11 @@ In the host file you should add an entry that looks something like this:
 1. Build the images and start the containers before continuing. Run the following command in the laradock folder under your project directory:
 
 ```bash
-$ docker-compose build nginx php-fpm mysql phpmyadmin
+$ docker-compose build nginx php-fpm mysql phpmyadmin/adminer
 
 # nginx is dependent on php-fpm, starting nginx will automatically 
 # start php-fpm
-$ docker-compose up -d nginx mysql phpmyadmin
+$ docker-compose up -d nginx mysql phpmyadmin/adminer
 
 # to view all started container
 $ docker-compose ps
@@ -149,7 +151,7 @@ Once, created F9 and then 1 to start debugger. Now you should be able to debug:
 
 ```bash
 # start the containers
-docker-compose up -d nginx mysql phpmyadmin
+docker-compose up -d nginx mysql phpmyadmin/adminer
 
 # ssh into the workspace container
 docker-compose exec --user=laradock workspace bash
@@ -231,7 +233,7 @@ In your laradock folder, run:
 
 ```bash
 # start the containers
-docker-compose up -d nginx mysql phpmyadmin
+docker-compose up -d nginx mysql phpmyadmin/adminer
 
 # ssh into the workspace container
 docker-compose exec --user=laradock workspace bash
@@ -336,7 +338,7 @@ In your laradock folder, run:
 
 ```bash
 # start the containers
-docker-compose up -d nginx mysql phpmyadmin
+docker-compose up -d nginx mysql phpmyadmin/adminer
 
 # ssh into the workspace container
 docker-compose exec --user=laradock workspace bash
@@ -345,6 +347,18 @@ docker-compose exec --user=laradock workspace bash
 cd my-project/ 
 yarn hot
 ```
+
+## How to access Adminer
+
+Make sure that containers are running, if not start the containers by running:
+
+```bash
+docker-compose up -d nginx mysql adminer
+```
+
+Then, you can open Adminer by accessing http://localhost:8888/
+
+![Adminer](/images/adminer.png)
 
 ## How to access phpMyAdmin
 
