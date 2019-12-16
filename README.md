@@ -56,8 +56,21 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
     2. Create [config.inc.php](https://github.com/s-emicolon/laradock-guidelines/blob/master/config.inc.php) in phpmyadmin directory:
     
     ![phpMyAdmin config dir](/images/phpmyadmin_config.png)
-
-6. Enable port 9000 for XDebug to work in yout Ubuntu machine by running:
+    
+6. Increase the Session Timeout for Adminer:
+    1. Open docker-compose.yml and add volume for Adminer:
+    
+    ![Adminer volume](/images/adminer_volume.png)
+    
+    2. Create increase_session_timeout.ini in adminer directory with only one line:
+    
+    ```bash
+    session.gc_maxlifetime=172800
+    ```
+    
+    ![Adminer ini config](/images/adminer_ini_config.png)
+    
+7. Enable port 9000 for XDebug to work in yout Ubuntu machine by running:
 
 ```bash
 $ sudo ufw allow 9000
