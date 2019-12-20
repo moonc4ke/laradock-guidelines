@@ -42,7 +42,7 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
     1. Under workspace > ports
         * Add 8080:8080 — this is for vue hot reloading
     2. Under workspace > extra_hosts:
-        * Add “larvel-test.dev.local:0.0.0.0” — this is to make sure vue hot reload server can resolve the host machine’s IP
+        * Add “laravel-test.dev.local:0.0.0.0” — this is to make sure vue hot reload server can resolve the host machine’s IP
     
 4. Configure xdebug.ini in php-fpm:
 
