@@ -23,6 +23,8 @@ Git clone of https://github.com/laradock/laradock and place it in your Project f
     
 ![your-site.conf](/images/conf.png)
 
+Make sure you use .dev.local at the end of each development server name
+
 2. Configure laradock .env file
     1. Rename COMPOSE_PROJECT_NAME to define the prefix of container names. For example, "bulve" or "patatas"
     2. Under php-fpm:
